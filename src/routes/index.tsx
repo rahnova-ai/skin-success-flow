@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
-  ArrowDown,
   ArrowRight,
   BadgeCheck,
   CalendarCheck,
@@ -8,17 +7,14 @@ import {
   Clock3,
   MapPin,
   MessageCircle,
-  ShieldCheck,
   Sparkles,
   Stethoscope,
-  Sun,
 } from "lucide-react";
 
 import logoAsset from "@/assets/dr-saima-logo.png.asset.json";
 import facialLinesAsset from "@/assets/facial-lines-result.png.asset.json";
 import eyeAreaAsset from "@/assets/eye-area-result.png.asset.json";
 import foreheadAsset from "@/assets/forehead-lines-result.png.asset.json";
-import treatmentAsset from "@/assets/treatment-procedure.mp4.asset.json";
 
 const whatsappUrl =
   "https://wa.me/923244529159?text=Hello%20Dr%20Saima%2C%20I%27d%20like%20to%20book%20my%20free%20October%20skin%20consultation.";
@@ -121,55 +117,6 @@ function Index() {
             <WhatsAppButton label="Book your free consultation" />
             <p className="microcopy">Chat directly with the clinic on WhatsApp.</p>
           </div>
-
-          <div className="hero-media">
-            <div className="video-frame">
-              <video
-                src={treatmentAsset.url}
-                controls
-                playsInline
-                muted
-                preload="metadata"
-                aria-label="Dr Saima Shahid performing a skin procedure"
-              />
-              <span className="real-care-label"><ShieldCheck aria-hidden="true" /> Real patient care</span>
-            </div>
-            <div className="hero-media-caption">
-              <span>In-clinic care</span>
-              <span>Bahria Phase 7, Islamabad</span>
-            </div>
-          </div>
-        </div>
-        <a href="#why-now" className="scroll-cue" aria-label="Continue to skin health information">
-          <ArrowDown aria-hidden="true" />
-        </a>
-      </section>
-
-      <section id="why-now" className="education-section section-shell">
-        <div className="section-heading">
-          <span className="section-kicker">Why start now?</span>
-          <h2>Small daily choices shape your skin over time.</h2>
-          <p>A clear plan can help you care for today’s concerns while protecting your skin for tomorrow.</p>
-        </div>
-        <div className="insight-grid">
-          <article>
-            <span className="insight-number">01</span>
-            <div className="insight-icon"><Sparkles aria-hidden="true" /></div>
-            <h3>Collagen changes after 25</h3>
-            <p>Natural collagen production gradually declines with age, which can affect firmness and texture.</p>
-          </article>
-          <article>
-            <span className="insight-number">02</span>
-            <div className="insight-icon"><Sun aria-hidden="true" /></div>
-            <h3>Daily SPF matters</h3>
-            <p>Consistent broad-spectrum SPF 30+ helps protect skin from sun-related ageing and damage.</p>
-          </article>
-          <article>
-            <span className="insight-number">03</span>
-            <div className="insight-icon"><ShieldCheck aria-hidden="true" /></div>
-            <h3>Prevention can be simpler</h3>
-            <p>Starting an appropriate plan early may help avoid more complex correction later.</p>
-          </article>
         </div>
       </section>
 
