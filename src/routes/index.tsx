@@ -102,8 +102,7 @@ function Index() {
             <h1>Dr Saima Shahid</h1>
             <p className="hero-title">Healthy skin starts with the right plan.</p>
             <p className="hero-lede">
-              Your skin is unique. Start with an expert assessment and a treatment plan built around
-              your concerns—not a one-size-fits-all solution.
+              Expert dermatology care tailored to your skin, your concerns, and your goals.
             </p>
             <div className="credentials" aria-label="Doctor credentials">
               <span><BadgeCheck aria-hidden="true" /> MBBS, MD Dermatology</span>
@@ -116,6 +115,14 @@ function Index() {
             </div>
             <WhatsAppButton label="Book your free consultation" />
             <p className="microcopy">Chat directly with the clinic on WhatsApp.</p>
+          </div>
+          <div className="hero-doctor" aria-label="Dr Saima Shahid">
+            <div className="hero-doctor-glow" aria-hidden="true"></div>
+            <img src="/dr-saima-portrait.webp" alt="Dr Saima Shahid seated in her clinic" />
+            <div className="hero-doctor-card">
+              <strong>Dr Saima Shahid</strong>
+              <span>Consultant Dermatologist · MD Dermatology</span>
+            </div>
           </div>
         </div>
       </section>

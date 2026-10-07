@@ -176,9 +176,15 @@
   .header-cta { align-items: center; background: var(--primary); border-radius: var(--radius); color: var(--primary-foreground); display: flex; font-size: 13px; font-weight: 700; gap: 8px; padding: 11px 15px; text-decoration: none; }
   .header-cta svg { height: 17px; width: 17px; }
 
-  .hero-section { background: linear-gradient(115deg, var(--background) 0 63%, var(--surface) 63%); min-height: 760px; padding: 130px 24px 58px; position: relative; }
-  .hero-inner { align-items: center; display: grid; margin: 0 auto; max-width: 1180px; }
-  .hero-copy { max-width: 660px; }
+  .hero-section { background: linear-gradient(115deg, var(--background) 0 58%, var(--surface) 58%); min-height: 760px; padding: 112px 24px 46px; position: relative; overflow: hidden; }
+  .hero-inner { align-items: center; display: grid; gap: 34px; grid-template-columns: minmax(0, .92fr) minmax(360px, .72fr); margin: 0 auto; max-width: 1180px; min-height: 600px; }
+  .hero-copy { max-width: 650px; position: relative; z-index: 2; }
+  .hero-doctor { align-self: end; height: 610px; justify-self: end; max-width: 500px; position: relative; width: 100%; }
+  .hero-doctor img { bottom: 0; filter: drop-shadow(0 24px 30px color-mix(in oklab, var(--forest) 22%, transparent)); height: 100%; object-fit: contain; object-position: bottom center; position: absolute; right: 0; width: 100%; z-index: 2; }
+  .hero-doctor-glow { background: radial-gradient(circle, color-mix(in oklab, var(--gold) 30%, transparent) 0%, transparent 68%); border-radius: 50%; height: 520px; position: absolute; right: 5%; top: 8%; width: 520px; z-index: 1; }
+  .hero-doctor-card { backdrop-filter: blur(10px); background: color-mix(in oklab, var(--card) 88%, transparent); border: 1px solid color-mix(in oklab, var(--primary) 14%, transparent); border-radius: 14px; bottom: 28px; box-shadow: 0 16px 35px color-mix(in oklab, var(--forest) 14%, transparent); display: flex; flex-direction: column; gap: 4px; left: 20px; padding: 14px 17px; position: absolute; z-index: 3; }
+  .hero-doctor-card strong { color: var(--foreground); font-family: var(--font-display); font-size: 19px; font-weight: 400; }
+  .hero-doctor-card span { color: var(--muted-foreground); font-size: 10px; letter-spacing: .04em; text-transform: uppercase; }
   .eyebrow, .section-kicker { align-items: center; color: var(--primary); display: inline-flex; font-size: 12px; font-weight: 700; gap: 7px; text-transform: uppercase; }
   .eyebrow svg { height: 15px; width: 15px; }
   .hero-copy h1 { font-size: clamp(58px, 7vw, 96px); line-height: .92; margin: 24px 0 16px; }
@@ -254,7 +260,7 @@
 }
 
 @media (max-width: 900px) {
-  .hero-section { background: linear-gradient(180deg, var(--background) 0 68%, var(--surface) 68%); min-height: auto; padding-top: 120px; }
+  .hero-section { background: linear-gradient(180deg, var(--background) 0 66%, var(--surface) 66%); min-height: auto; padding-top: 105px; }
   .hero-copy { max-width: 700px; }
   .doctor-section { gap: 50px; grid-template-columns: 1fr; }
   .consultation-list { border-left: 0; border-top: 1px solid var(--border); padding: 36px 0 0; }
@@ -267,8 +273,14 @@
   .brand-mark strong { font-size: 16px; }
   .header-cta span { display: none; }
   .header-cta { height: 42px; justify-content: center; padding: 0; width: 42px; }
-  .hero-section { padding: 105px 16px 62px; }
+  .hero-section { padding: 92px 16px 24px; }
+  .hero-inner { display: flex; flex-direction: column; gap: 4px; min-height: 0; }
+  .hero-copy { width: 100%; }
   .hero-copy h1 { font-size: 55px; margin-top: 20px; }
+  .hero-doctor { height: 430px; margin: -8px auto 0; max-width: 390px; width: 100%; }
+  .hero-doctor img { height: 100%; right: 50%; transform: translateX(50%); width: 100%; }
+  .hero-doctor-glow { height: 360px; right: 50%; top: 8%; transform: translateX(50%); width: 360px; }
+  .hero-doctor-card { bottom: 12px; left: 50%; transform: translateX(-50%); white-space: nowrap; }
   .hero-title { font-size: 29px; }
   .hero-lede { font-size: 15px; }
   .credentials { align-items: flex-start; flex-direction: column; gap: 10px; }
@@ -292,6 +304,13 @@
   .footer-inner { align-items: flex-start; flex-direction: column; gap: 22px; }
   .footer-inner > p { text-align: left; }
   .floating-whatsapp { display: flex; }
+}
+
+@media (max-width: 420px) {
+  .hero-doctor { height: 385px; }
+  .hero-doctor-card { bottom: 8px; padding: 11px 13px; }
+  .hero-doctor-card strong { font-size: 17px; }
+  .hero-doctor-card span { font-size: 9px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
