@@ -177,7 +177,7 @@
   .header-cta svg { height: 17px; width: 17px; }
 
   .hero-section { background: linear-gradient(115deg, var(--background) 0 63%, var(--surface) 63%); min-height: 760px; padding: 130px 24px 58px; position: relative; }
-  .hero-inner { align-items: center; display: grid; gap: clamp(40px, 7vw, 100px); grid-template-columns: minmax(0, 1.05fr) minmax(300px, .72fr); margin: 0 auto; max-width: 1180px; }
+  .hero-inner { align-items: center; display: grid; margin: 0 auto; max-width: 1180px; }
   .hero-copy { max-width: 660px; }
   .eyebrow, .section-kicker { align-items: center; color: var(--primary); display: inline-flex; font-size: 12px; font-weight: 700; gap: 7px; text-transform: uppercase; }
   .eyebrow svg { height: 15px; width: 15px; }
@@ -196,28 +196,11 @@
   .cta-button svg { height: 19px; width: 19px; }
   .cta-button svg:last-child { height: 16px; margin-left: 5px; width: 16px; }
   .microcopy { color: var(--muted-foreground); font-size: 11px; margin: 9px 0 0 4px; }
-  .hero-media { min-width: 0; }
-  .video-frame { background: var(--forest); box-shadow: 24px 24px 0 var(--secondary); height: min(565px, 69vh); margin: 0 auto; max-width: 390px; overflow: hidden; position: relative; width: 100%; }
-  .video-frame video { height: 100%; object-fit: cover; width: 100%; }
-  .real-care-label { align-items: center; background: color-mix(in oklab, var(--forest) 88%, transparent); bottom: 14px; color: var(--primary-foreground); display: flex; font-size: 11px; font-weight: 700; gap: 6px; left: 14px; padding: 8px 10px; position: absolute; text-transform: uppercase; }
-  .real-care-label svg { height: 14px; width: 14px; }
-  .hero-media-caption { color: var(--muted-foreground); display: flex; font-size: 11px; justify-content: space-between; margin: 34px auto 0; max-width: 390px; text-transform: uppercase; }
-  .scroll-cue { align-items: center; bottom: 22px; color: var(--primary); display: flex; height: 34px; justify-content: center; left: 50%; position: absolute; transform: translateX(-50%); width: 34px; }
-  .scroll-cue svg { height: 18px; width: 18px; }
 
-  .education-section { padding-block: 110px; }
   .section-heading { margin: 0 auto 55px; max-width: 700px; text-align: center; }
   .section-heading h2 { font-size: clamp(38px, 5vw, 62px); line-height: 1.05; margin: 15px 0 18px; }
   .section-heading p { color: var(--muted-foreground); font-size: 16px; line-height: 1.7; margin: 0; }
   .align-left { margin: 0; text-align: left; }
-  .insight-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
-  .insight-grid article { border-left: 1px solid var(--border); min-height: 290px; padding: 10px 38px 20px; position: relative; }
-  .insight-grid article:last-child { border-right: 1px solid var(--border); }
-  .insight-number { color: var(--border); font-family: var(--font-display); font-size: 60px; line-height: 1; position: absolute; right: 24px; top: 0; }
-  .insight-icon { align-items: center; background: var(--secondary); color: var(--primary); display: flex; height: 46px; justify-content: center; margin-bottom: 50px; width: 46px; }
-  .insight-icon svg { height: 22px; width: 22px; }
-  .insight-grid h3 { font-family: var(--font-display); font-size: 25px; font-weight: 400; margin: 0 0 12px; }
-  .insight-grid p { color: var(--muted-foreground); font-size: 14px; line-height: 1.65; margin: 0; }
 
   .results-section { background: var(--forest); color: var(--primary-foreground); padding-block: 110px; }
   .results-heading { align-items: end; display: grid; gap: 50px; grid-template-columns: 1fr .7fr; margin-bottom: 50px; }
@@ -272,10 +255,7 @@
 
 @media (max-width: 900px) {
   .hero-section { background: linear-gradient(180deg, var(--background) 0 68%, var(--surface) 68%); min-height: auto; padding-top: 120px; }
-  .hero-inner { gap: 60px; grid-template-columns: 1fr; }
   .hero-copy { max-width: 700px; }
-  .video-frame { height: min(620px, 76vh); max-width: 430px; }
-  .scroll-cue { display: none; }
   .doctor-section { gap: 50px; grid-template-columns: 1fr; }
   .consultation-list { border-left: 0; border-top: 1px solid var(--border); padding: 36px 0 0; }
 }
@@ -295,15 +275,9 @@
   .offer-strip { align-items: flex-start; line-height: 1.45; }
   .offer-strip span { display: flex; flex-direction: column; }
   .cta-button { width: 100%; }
-  .video-frame { box-shadow: 12px 12px 0 var(--secondary); height: 520px; }
-  .hero-media-caption { margin-top: 27px; }
-  .education-section, .results-section, .doctor-section, .final-cta-section { padding-block: 78px; }
+  .results-section, .doctor-section, .final-cta-section { padding-block: 78px; }
   .section-heading { margin-bottom: 40px; }
   .section-heading h2 { font-size: 41px; }
-  .insight-grid { grid-template-columns: 1fr; }
-  .insight-grid article, .insight-grid article:last-child { border: 0; border-top: 1px solid var(--border); min-height: auto; padding: 28px 0 30px; }
-  .insight-icon { margin-bottom: 26px; }
-  .insight-number { right: 4px; top: 23px; }
   .results-heading { align-items: start; gap: 22px; grid-template-columns: 1fr; }
   .results-heading .section-heading h2 { font-size: 40px; }
   .results-grid { grid-template-columns: 1fr; }
